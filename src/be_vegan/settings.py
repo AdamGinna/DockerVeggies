@@ -111,15 +111,12 @@ DATABASES = {
 #                }
 #    },
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_database',
-        'USER': 'django',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
         'PASSWORD': 'polska123',
-        'HOST': 'localhost',
-        'PORT': '3306',
-                'OPTIONS': {
-                    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-                }
+        'HOST': 'db',
+        'PORT': '5432',
     },
 }
 
