@@ -25,6 +25,7 @@ SECRET_KEY = SecretVariables.secret_key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ["*"]
 CSFR_TRUSTED_ORIGINS = ["*"]
 
@@ -144,7 +145,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_ORIGIN_WHITELIST =('*')
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
