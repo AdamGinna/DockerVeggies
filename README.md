@@ -59,3 +59,22 @@ https://idroot.us/install-mysql-server-debian-10/
   
 # Mongo DB instalacja  
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/
+
+# Docker deployment
+It is possible to deploy veggies on docker using docker-compose.
+## Requirements
+* Installed docker and docker-compose 
+* Installed npm  
+## Start 
+To start docker container use:
+```sh docker-compose up```
+in main directory.
+## Troubleshooting
+### Postgres database 
+If there is en error inform that database isn't exist, change line from 'docker-compose.yml'
+
+'command: python manage.py runserver 0.0.0.0:8000' to 'command: python manage.py migrate'.
+
+Wait till migration will made and container will turn off. Then run again project with previous command.
+### Nodejs 
+If there is problems with web container go to `wegemania-web` directory and run: `npm install`. 
